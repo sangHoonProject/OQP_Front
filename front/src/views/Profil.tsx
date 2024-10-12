@@ -1,6 +1,6 @@
 import Navbar from '../components/Navbar';
 
-function Main() {
+function Profil() {
   return (
     <div
       style={{
@@ -10,10 +10,9 @@ function Main() {
       }}
       className="content"
     >
-      <Navbar />
 
     </div>
   );
 }
 
-export default Main;
+export default Profil;

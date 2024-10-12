@@ -5,6 +5,7 @@ import './App.css';
 import Main from './views/Main';
 import Signup from './Sign/Signup';
 import Signin from './Sign/Signin';
+import Profil from './views/Profil';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/" element={<Main />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/signin" element={<Signin />} />
+        <Route path="/signin" element={<Profil />} />
       </Routes>
     </BrowserRouter>
   );

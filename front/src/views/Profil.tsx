@@ -1,6 +1,14 @@
 import Navbar from '../components/Navbar';
 
 function Profil() {
+
+    async function userNameres() {
+        try {
+            const response = fetch('');
+            const data = response
+        }
+    }
+
   return (
     <div
       style={{
@@ -10,7 +18,7 @@ function Profil() {
       }}
       className="content"
     >
-
+        <h2>{localStorage.getItem('userName')}</h2>
     </div>
   );
 }

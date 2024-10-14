@@ -11,7 +11,6 @@ function Main() {
       className="content"
     >
       <Navbar />
-
     </div>
   );
 }

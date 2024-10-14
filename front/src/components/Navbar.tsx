@@ -16,6 +16,12 @@ function Navbar() {
     window.location.href = '/Signin';
   }
 
+  const [toggle2, setToggle2] = useState('none');
+  function menu() {
+    const set2 = toggle2 === 'none' ? 'block' : 'none';
+    setToggle2(set2);
+  }
+
   return (
     <div
       style={{
@@ -124,24 +130,91 @@ function Navbar() {
           display: 'none',
         }}
       >
-        <svg
-          width="110"
-          height="24"
-          viewBox="0 0 105 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          style={{
-            marginTop: '25px',
-            marginLeft: '150px',
-          }}
-        >
-          <path
-            d="M20 18H4M20 12H4M20 6H4"
-            stroke="black"
-            stroke-width="2"
-            stroke-linecap="round"
+        <a onClick={menu} style={{ cursor: 'pointer' }}>
+          <svg
+            width="110"
+            height="24"
+            viewBox="0 0 105 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            style={{
+              marginTop: '25px',
+              marginLeft: '150px',
+            }}
+          >
+            <path
+              d="M20 18H4M20 12H4M20 6H4"
+              stroke="black"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
+        </a>
+      </div>
+      <div
+        style={{
+          position: 'fixed',
+          left: '0',
+          bottom: '-290px',
+          width: '100%',
+          border: '1px solid #adadad',
+          backgroundColor: '#f8f9fa',
+          borderRadius: '5px',
+          display: toggle2,
+        }}
+      >
+        <div style={{ width: '90%', margin: 'auto' }} className="cooki">
+          <h3 style={{ marginTop: '20px' }}>
+            {' '}
+            {localStorage.getItem('nickname')}김민서 님
+          </h3>
+          <input
+            type="text"
+            placeholder="카테고리나 유저이름을 검색하세요"
+            style={{
+              width: '100%',
+              backgroundColor: 'rgb(255, 255, 255, 0)',
+              border: 'none',
+              borderBottom: '1px solid black',
+              marginTop: '40px',
+              marginBottom: '40px',
+              fontFamily: 'yogiaddea',
+              fontSize: '15px',
+            }}
           />
-        </svg>
+          <div style={{ marginBottom: '50px' }}>
+            <button
+              onClick={() => (window.location.href = '/Profil')}
+              style={{
+                color: 'black',
+                fontFamily: 'NoonnuBasicGothicRegular',
+                padding: '10px',
+                border: 'none',
+                borderRadius: '10px',
+                marginBottom: '10px',
+                backgroundColor: 'rgb(255, 255, 255, 0)',
+                cursor: 'pointer',
+              }}
+            >
+              My Profil
+            </button>{' '}
+            <br />
+            <button
+              onClick={re}
+              style={{
+                color: 'black',
+                backgroundColor: 'rgb(255, 255, 255, 0)',
+                fontFamily: 'NoonnuBasicGothicRegular',
+                padding: '10px',
+                border: 'none',
+                borderRadius: '10px',
+                cursor: 'pointer',
+              }}
+            >
+              Log Out
+            </button>
+          </div>
+        </div>
       </div>
       <style>{`
         @media (max-width: 659px) {

@@ -81,6 +81,33 @@ function Profil() {
         <ProfilP>nickname : {nickname}</ProfilP>
         <ProfilP>email : {email}</ProfilP>
         <ProfilP>password : {password}</ProfilP>
+        <div>
+          <button
+            style={{
+              color: 'white',
+              backgroundColor: '#0d6efd',
+              fontFamily: 'NoonnuBasicGothicRegular',
+              padding: '10px',
+              border: 'none',
+              borderRadius: '10px',
+              marginRight: '20px',
+            }}
+          >
+            회원 정보 수정
+          </button>
+          <button
+            style={{
+              color: 'white',
+              backgroundColor: '#dc3545',
+              fontFamily: 'NoonnuBasicGothicRegular',
+              padding: '10px',
+              border: 'none',
+              borderRadius: '10px',
+            }}
+          >
+            회원 탈퇴하기
+          </button>
+        </div>
       </div>
 
       <h1

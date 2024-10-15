@@ -40,13 +40,13 @@ function Signup() {
       );
       const result = await response.json();
       console.log(result);
-      setRes(result.errorMsg);
-
+      setRes(result.message);  
+        
       if (response.ok) {
         console.log('성공');
         window.location.href = '/signin';
       } else {
-        console.log('에러');
+        setRes(result.message);
       }
     } catch (error) {
       console.log(error);
@@ -116,6 +116,7 @@ function Signup() {
         <Link to={'/signin'} style={{ color: 'black' }}>
           이미 회원이신가요? 로그인
         </Link>
+        <p></p>
         <button
           onClick={signup}
           style={{

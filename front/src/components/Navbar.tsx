@@ -2,8 +2,6 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 function Navbar() {
-  let userName: string = '김민서';
-
   const [toggle, setToggle] = useState('none');
 
   function setting() {
@@ -80,7 +78,7 @@ function Navbar() {
 
       <div
         style={{
-          width: '80px',
+          width: '140px',
           textAlign: 'right',
           marginTop: '25px',
           marginRight: '50px',
@@ -166,7 +164,7 @@ function Navbar() {
         <div style={{ width: '90%', margin: 'auto' }} className="cooki">
           <h3 style={{ marginTop: '20px' }}>
             {' '}
-            {localStorage.getItem('nickname')}김민서 님
+            {localStorage.getItem('nickname')} 님
           </h3>
           <input
             type="text"

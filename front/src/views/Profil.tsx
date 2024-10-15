@@ -15,40 +15,25 @@ function Profil() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const data = [
-    {
-      userName: '김민서',
-      userId: 'rlazmfdl',
-      nickname: '김클이',
-      email: 'rlazmfdl@gmail.com',
-      password: 'ajjdowkdj@!',
-    },
-    {
-      contents: 'title',
-    },
-  ];
-
   async function userNameres() {
     try {
       const response = await fetch(
-        `${process.env.REACT_APP_API_KEY}/api/user/search/`
+        `${process.env.REACT_APP_API_KEY}/api/user/search/${localStorage.getItem('nickname')}`
       );
       const data = await response.json();
-      // setUserName(data[0].userName);
-      // setUserId(data[0].userId);
-      // setNickname(data[0].nickname);
-      // setEmail(data[0].email);
-      // setPassword(data[0].password);
-    } catch (error) {}
+      console.log(data);
+      setUserName(data.name);
+      setUserId(data.userId);
+      setNickname(data.nickname);
+      setEmail(data.email);
+      setPassword(data.password);
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   useEffect(() => {
-    // userNameres();
-    setUserName(data[0].userName || '');
-    setUserId(data[0].userId || '');
-    setNickname(data[0].nickname || '');
-    setEmail(data[0].email || '');
-    setPassword(data[0].password || '');
+    userNameres();
   });
 
   return (

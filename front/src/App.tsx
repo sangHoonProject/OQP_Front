@@ -7,6 +7,7 @@ import Signup from './Sign/Signup';
 import Signin from './Sign/Signin';
 import Profil from './views/Profil';
 import Navbar from './components/Navbar';
+import ForgotPassWord from './ForgotPassword';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/signin" element={<Signin />} />
         <Route path="/Profil" element={<Profil />} />
+        <Route path='/forgotpassword' element={<ForgotPassWord />}/>
       </Routes>
     </BrowserRouter>
   );

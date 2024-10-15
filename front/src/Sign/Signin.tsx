@@ -89,15 +89,16 @@ function Signin() {
         />
         <br />
         <p>{res}</p>
-        <div style={{width : '60%', textAlign : 'left',paddingLeft : '20%'}}>
-            <div style={{marginBottom : '10px'}}>
-        <Link to={'/Signup'} style={{ color: 'black', textAlign : 'left'}}>
-          회원이 아니신가요? 회원가입
-        </Link> <br/>
-        </div>
-        <Link to={'/forgotpassword'} style={{ color: 'black'}}>
+        <div style={{ width: '60%', textAlign: 'left', paddingLeft: '20%' }}>
+          <div style={{ marginBottom: '10px' }}>
+            <Link to={'/Signup'} style={{ color: 'black', textAlign: 'left' }}>
+              회원이 아니신가요? 회원가입
+            </Link>{' '}
+            <br />
+          </div>
+          <Link to={'/forgotpassword'} style={{ color: 'black' }}>
             비밀번호를 잊으셨나요?
-        </Link>
+          </Link>
         </div>
         <button
           onClick={signup}

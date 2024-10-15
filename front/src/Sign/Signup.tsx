@@ -40,8 +40,8 @@ function Signup() {
       );
       const result = await response.json();
       console.log(result);
-      setRes(result.message);  
-        
+      setRes(result.message);
+
       if (response.ok) {
         console.log('성공');
         window.location.href = '/signin';

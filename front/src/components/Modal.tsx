@@ -69,7 +69,7 @@ const Modal = ({
     <ModalOverlay onClick={onClose}>
       <ModalContent onClick={(e) => e.stopPropagation()}>
         <h2 style={{ marginBottom: '10px' }}>정말 회원을 탈퇴하시겠습니까?</h2>
-        <p style={{ marginBottom: '30px' }}>
+        <p style={{ marginBottom: '3    0px' }}>
           탈퇴 후에는 모든 정보가 삭제됩니다.
         </p>
         <button

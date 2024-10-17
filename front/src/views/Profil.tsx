@@ -1,15 +1,8 @@
 import { useState } from 'react';
 import Navbar from '../components/Navbar';
-import styled from 'styled-components';
 import Change from './change';
 import Userprofilcomponents from './userprofilcomponents';
 import Modal from '../components/Modal'; // 모달 컴포넌트 import
-
-const ProfilP = styled.p`
-  font-family: 'NoonnuBasicGothicRegular';
-  margin-bottom: 22px;
-  font-size: 18px;
-`;
 
 function Profil() {
   const [toggle, setToggle] = useState(false);

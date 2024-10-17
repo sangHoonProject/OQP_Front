@@ -1,14 +1,10 @@
-import React from 'react';
-import logo from './logo.svg';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Main from './views/Main';
 import Signup from './Sign/Signup';
 import Signin from './Sign/Signin';
 import Profil from './views/Profil';
-import Navbar from './components/Navbar';
 import ForgotPassWord from './ForgotPassword';
-import Change from './views/change';
 
 function App() {
   return (
@@ -19,7 +15,6 @@ function App() {
         <Route path="/signin" element={<Signin />} />
         <Route path="/Profil" element={<Profil />} />
         <Route path="/forgotpassword" element={<ForgotPassWord />} />
-        <Route path="/change" element={<Change />} />
       </Routes>
     </BrowserRouter>
   );

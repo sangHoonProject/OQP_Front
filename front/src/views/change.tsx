@@ -120,7 +120,7 @@ function Change() {
         ref={passwordRef}
       />
       <br />
-      <p></p>
+      <p>{result}</p>
       <button
         onClick={changes}
         style={{

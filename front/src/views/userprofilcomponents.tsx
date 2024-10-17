@@ -10,10 +10,10 @@ const ProfilP = styled.p`
 
 function Userprofilcomponents() {
   const [userName, setUserName] = useState('김민서');
-  const [userId, setUserId] = useState('rlazmfdl');
+  //   const [userId, setUserId] = useState('rlazmfdl');
   const [nickname, setNickname] = useState('rlazmfdl');
   const [email, setEmail] = useState('rlazmfdl@gmail.com');
-  const [password, setPassword] = useState('a1122334455');
+  //   const [password, setPassword] = useState('a1122334455');
 
   async function userNameres() {
     try {
@@ -23,10 +23,10 @@ function Userprofilcomponents() {
       const data = await response.json();
       console.log(data);
       setUserName(data.name);
-      setUserId(data.userId);
+      //   setUserId(data.userId);
       setNickname(data.nickname);
       setEmail(data.email);
-      setPassword(data.password);
+      //   setPassword(data.password);
     } catch (error) {
       console.log(error);
     }

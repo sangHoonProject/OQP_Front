@@ -1,6 +1,9 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Navbar from '../components/Navbar';
 import styled from 'styled-components';
+import Change from './change';
+import Userprofilcomponents from './userprofilcomponents';
+import Modal from '../components/Modal'; // 모달 컴포넌트 import
 
 const ProfilP = styled.p`
   font-family: 'NoonnuBasicGothicRegular';
@@ -9,32 +12,12 @@ const ProfilP = styled.p`
 `;
 
 function Profil() {
-  const [userName, setUserName] = useState('');
-  const [userId, setUserId] = useState('');
-  const [nickname, setNickname] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [toggle, setToggle] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false); // 모달 상태 추가
 
-  async function userNameres() {
-    try {
-      const response = await fetch(
-        `${process.env.REACT_APP_API_KEY}/api/user/search/${localStorage.getItem('nickname')}`
-      );
-      const data = await response.json();
-      console.log(data);
-      setUserName(data.name);
-      setUserId(data.userId);
-      setNickname(data.nickname);
-      setEmail(data.email);
-      setPassword(data.password);
-    } catch (error) {
-      console.log(error);
-    }
+  function changeuser() {
+    setToggle((prev) => !prev);
   }
-
-  useEffect(() => {
-    userNameres();
-  });
 
   return (
     <div
@@ -61,11 +44,7 @@ function Profil() {
         >
           My Profil
         </h1>
-        <ProfilP>Name : {userName}</ProfilP>
-        <ProfilP>Id : {userId}</ProfilP>
-        <ProfilP>nickname : {nickname}</ProfilP>
-        <ProfilP>email : {email}</ProfilP>
-        <ProfilP>password : {password}</ProfilP>
+        {toggle ? <Change /> : <Userprofilcomponents />}
         <div>
           <button
             style={{
@@ -77,9 +56,11 @@ function Profil() {
               borderRadius: '10px',
               marginRight: '20px',
             }}
+            onClick={changeuser}
           >
             회원 정보 수정
           </button>
+
           <button
             style={{
               color: 'white',
@@ -89,6 +70,7 @@ function Profil() {
               border: 'none',
               borderRadius: '10px',
             }}
+            onClick={() => setIsModalOpen(true)} // 모달 열기
           >
             회원 탈퇴하기
           </button>
@@ -103,16 +85,10 @@ function Profil() {
       </h1>
       <div>
         <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
       </div>
+
+      {/* 모달 컴포넌트 */}
+      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </div>
   );
 }

@@ -1,6 +1,10 @@
 import Navbar from '../components/Navbar';
+import ViewContent from '../components/viewcontent';
 
 function Main() {
+
+
+
   return (
     <div
       style={{
@@ -11,6 +15,7 @@ function Main() {
       className="content"
     >
       <Navbar />
+      <ViewContent />
     </div>
   );
 }

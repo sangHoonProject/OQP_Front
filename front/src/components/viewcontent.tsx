@@ -1,8 +1,10 @@
+import { useEffect } from "react"
+
 function ViewContent() {
     var pagenumber = 0
 
     interface Json {
-        
+
     }
 
     async function view() {
@@ -16,6 +18,10 @@ function ViewContent() {
         console.log(error)
       }
     }
+
+    useEffect(() => {
+        view()
+    },[])
   return (
     <div>
         <h1>view</h1>

@@ -1,120 +1,89 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Navbar from '../components/Navbar';
-import styled from 'styled-components';
-
-const ProfilP = styled.p`
-  font-family: 'NoonnuBasicGothicRegular';
-  margin-bottom: 22px;
-  font-size: 18px;
-`;
+import Change from './change';
+import Userprofilcomponents from './userprofilcomponents';
+import Modal from '../components/Modal'; // 모달 컴포넌트 import
 
 function Profil() {
-  const [userName, setUserName] = useState('');
-  const [userId, setUserId] = useState('');
-  const [nickname, setNickname] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+	const [toggle, setToggle] = useState(false);
+	const [isModalOpen, setIsModalOpen] = useState(false); // 모달 상태 추가
 
-  async function userNameres() {
-    try {
-      const response = await fetch(
-        `${process.env.REACT_APP_API_KEY}/api/user/search/${localStorage.getItem('nickname')}`
-      );
-      const data = await response.json();
-      console.log(data);
-      setUserName(data.name);
-      setUserId(data.userId);
-      setNickname(data.nickname);
-      setEmail(data.email);
-      setPassword(data.password);
-    } catch (error) {
-      console.log(error);
-    }
-  }
+	function changeuser() {
+		setToggle((prev) => !prev);
+	}
 
-  useEffect(() => {
-    userNameres();
-  });
+	return (
+		<div
+			style={{
+				margin: 'auto',
+				width: '90%',
+				backgroundColor: 'rgb(255, 255, 255)',
+			}}
+		>
+			<Navbar />
+			<div
+				style={{
+					margin: '150px auto',
+					textAlign: 'center',
+					padding: '10px',
+					width: '100%',
+				}}
+			>
+				<h1
+					className="yogiaddea"
+					style={{
+						marginBottom: '50px',
+					}}
+				>
+					My Profil
+				</h1>
+				{toggle ? <Change /> : <Userprofilcomponents />}
+				<div>
+					<button
+						style={{
+							color: 'white',
+							backgroundColor: '#0d6efd',
+							fontFamily: 'NoonnuBasicGothicRegular',
+							padding: '10px',
+							border: 'none',
+							borderRadius: '10px',
+							marginRight: '20px',
+						}}
+						onClick={changeuser}
+					>
+						회원 정보 수정
+					</button>
 
-  return (
-    <div
-      style={{
-        margin: 'auto',
-        width: '90%',
-        backgroundColor: 'rgb(255, 255, 255)',
-      }}
-    >
-      <Navbar />
-      <div
-        style={{
-          margin: '150px auto',
-          textAlign: 'center',
-          padding: '10px',
-          width: '100%',
-        }}
-      >
-        <h1
-          className="yogiaddea"
-          style={{
-            marginBottom: '50px',
-          }}
-        >
-          My Profil
-        </h1>
-        <ProfilP>Name : {userName}</ProfilP>
-        <ProfilP>Id : {userId}</ProfilP>
-        <ProfilP>nickname : {nickname}</ProfilP>
-        <ProfilP>email : {email}</ProfilP>
-        <ProfilP>password : {password}</ProfilP>
-        <div>
-          <button
-            style={{
-              color: 'white',
-              backgroundColor: '#0d6efd',
-              fontFamily: 'NoonnuBasicGothicRegular',
-              padding: '10px',
-              border: 'none',
-              borderRadius: '10px',
-              marginRight: '20px',
-            }}
-          >
-            회원 정보 수정
-          </button>
-          <button
-            style={{
-              color: 'white',
-              backgroundColor: '#dc3545',
-              fontFamily: 'NoonnuBasicGothicRegular',
-              padding: '10px',
-              border: 'none',
-              borderRadius: '10px',
-            }}
-          >
-            회원 탈퇴하기
-          </button>
-        </div>
-      </div>
+					<button
+						style={{
+							color: 'white',
+							backgroundColor: '#dc3545',
+							fontFamily: 'NoonnuBasicGothicRegular',
+							padding: '10px',
+							border: 'none',
+							borderRadius: '10px',
+						}}
+						onClick={() => setIsModalOpen(true)} // 모달 열기
+					>
+						회원 탈퇴하기
+					</button>
+				</div>
+			</div>
 
-      <h1
-        className="yogiaddea"
-        style={{ width: '100%', margin: 'auto', color: 'blue' }}
-      >
-        My Contents
-      </h1>
-      <div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-    </div>
-  );
+			<h1
+				className="yogiaddea"
+				style={{ width: '100%', margin: 'auto', color: 'blue' }}
+			>
+				My Contents
+			</h1>
+			<div>
+				<div></div>
+			</div>
+
+			{/* 모달 컴포넌트 */}
+			<Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+		</div>
+	);
 }
 
 export default Profil;

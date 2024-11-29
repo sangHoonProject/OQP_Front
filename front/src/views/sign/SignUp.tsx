@@ -4,9 +4,10 @@ import toast, { Toaster } from "react-hot-toast";
 function SignUp() {
   const [authToggle, setAuthToggle] = useState(false);
   const [c, setC] = useState("3 : 00");
-  const [sec, setSec] = useState(180); // 기본값을 180초로 설정
+  const [sec, setSec] = useState(180);
   const [stop, setStop] = useState(false);
 
+  document.cookie = "user=John";
   useEffect(() => {
     let intervalId: number = 0;
 
@@ -55,8 +56,7 @@ function SignUp() {
       <button
         onClick={() => {
           setAuthToggle(!authToggle);
-          setSec(180); // 인증 시작 시 180초로 초기화
-
+          setSec(180);
         }}
       >
         인증코드 {authToggle ? "취소" : "전송"}

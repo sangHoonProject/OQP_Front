@@ -1,7 +1,29 @@
 import { Link } from 'react-router-dom';
 import Color from '../../styles/Color';
+import { useState } from 'react';
+import { toast } from 'react-hot-toast';
+import Auth from '../../api/Auth';
 
 function SignIn() {
+  const [email, setEmail] = useState('')
+  const [passWord, setPassWord] = useState('')
+
+  function signIn() {
+    const userInfo = {
+      email: email,
+      password: passWord,
+    } 
+    
+    toast.promise(
+        Auth.SignIn(userInfo),
+        {
+          loading: '로그인 중',
+          success: <b>로그인 성공!</b>,
+          error: <b>이메일나 비밀번호를 잘못 적었습니다.</b>,
+        }
+        );
+      
+  }
   return (
     <div
       style={{
@@ -53,6 +75,9 @@ function SignIn() {
               boxSizing: 'border-box',
               outline: 'none',
             }}
+            onChange={(e) => {
+              setEmail(e.target.value)
+            }}
           />
         </div>
 
@@ -79,6 +104,9 @@ function SignIn() {
               boxSizing: 'border-box',
               outline: 'none',
             }}
+            onChange={(e) => {
+              setPassWord(e.target.value)
+            }}
           />
         </div>
 
@@ -94,6 +122,7 @@ function SignIn() {
             cursor: 'pointer',
             fontWeight: 'bold',
           }}
+          onClick={(signIn)}
         >
           Sign In
         </button>

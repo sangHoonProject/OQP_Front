@@ -2,8 +2,40 @@ import { useEffect, useState } from 'react'
 import toast, { Toaster } from 'react-hot-toast'
 import { Link } from 'react-router-dom'
 import Color from '../../styles/Color'
+import Auth from '../../api/Auth'
 
 function SignUp() {
+  const [userEmail, setUserEmail] = useState('')
+  const [emailValidation, setEmailValidation] = useState('')
+  const [nickname, setNickName] = useState('')
+  const [password, setPassword] = useState('')
+
+  async function emailCheck() {
+    if (userEmail) {
+      const email = {email: userEmail}
+      toast.promise(
+        Auth.sendEmail(email),
+         {
+           loading: '로딩 중',
+           success: <b>이메일을 성공적을 전송하였습니다.</b>,
+           error: <b>유효하지 않은 이메일 입니다.</b>,
+         }
+       );
+    } else {
+      toast.error(<b>이메일을 입력해주세요.</b>)
+    }
+
+  }
+
+  async function signup() {
+    const data = {
+      "nickname": nickname,
+      "email": userEmail,
+      "password": password,
+      "auth_code": emailValidation,
+    }
+    Auth.SignUp(data);
+  }
   return (
     <div
       style={{
@@ -55,8 +87,11 @@ function SignUp() {
               boxSizing: 'border-box',
               outline: 'none',
             }}
+            onChange={(e) => {
+              setUserEmail(e.target.value)
+            }}
           />
-          <button>인증</button>
+          <button onClick={emailCheck}>인증</button>
         </div>
         <div style={{ marginBottom: '15px' }}>
           <label
@@ -70,8 +105,8 @@ function SignUp() {
             E-mail vaildatoin
           </label>
           <input
-            type="email"
-            placeholder="이메일을 입력하세요."
+            type="text"
+            placeholder="이메일 인증코드를 입력하세요."
             style={{
               width: '100%',
               padding: '10px',
@@ -79,6 +114,9 @@ function SignUp() {
               borderRadius: '5px',
               boxSizing: 'border-box',
               outline: 'none',
+            }}
+            onChange={(e) => {
+              setEmailValidation(e.target.value)
             }}
           />
         </div>
@@ -105,6 +143,9 @@ function SignUp() {
               boxSizing: 'border-box',
               outline: 'none',
             }}
+            onChange={(e) => {
+              setNickName(e.target.value)
+            }}
           />
         </div>
 
@@ -130,6 +171,9 @@ function SignUp() {
               boxSizing: 'border-box',
               outline: 'none',
             }}
+            onChange={(e) => {
+              setPassword(e.target.value)
+            }}
           />
         </div>
 
@@ -144,6 +188,7 @@ function SignUp() {
             cursor: 'pointer',
             fontWeight: 'bold',
           }}
+          onClick={signup}
         >
           Sign In
         </button>

@@ -197,7 +197,7 @@ function SignUp() {
           <Link
             to="/SignIn"
             style={{
-              color: 'rgb(53, 53, 53)',
+              color: Color.puple,
                 
             }}
           >

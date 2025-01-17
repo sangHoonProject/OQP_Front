@@ -6,7 +6,7 @@ import Color from "../styles/Color"
 
 function Main() {
   return (
-    <div>
+    <div style={{backgroundColor:Color.sectioncolor}}>
       <Headers />
       <MainDiv />
       <MainContents />
@@ -14,7 +14,6 @@ function Main() {
       <button onClick={() => {
         window.location.href = './SignIn'
       }}></button>
-      <h1 style={{color:Color.red}}>메인페이지</h1>
       {/* <nav style={{color:}}>sdaf</nav> */}
     </div>
   )

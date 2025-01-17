@@ -3,10 +3,28 @@ import Color from '../../styles/Color';
 import { useState } from 'react';
 import { toast } from 'react-hot-toast';
 import Auth from '../../api/Auth';
+import '../../styles/Fonts.css';
+import styled from 'styled-components';
+
+const SignInHeaders = styled.h1`
+  @font-face {
+    font-family: 'godoRoundedR';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2409-1@1.0/godoRoundedR.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  font-family: 'godoRoundedR', sans-serif;
+  font-size: 2rem;
+  color: #333;
+`;
+
 
 function SignIn() {
   const [email, setEmail] = useState('')
   const [passWord, setPassWord] = useState('')
+
+
 
   function signIn() {
     const userInfo = {
@@ -48,10 +66,11 @@ function SignIn() {
           marginBottom: '100px'
         }}
       >
-        <h1 style={{
+        <SignInHeaders style={{
           color: Color.puple,
           marginBottom: '20px',
-          }}>Sign In</h1>
+          fontFamily: 'godoRoundedR'
+          }}>Sign In</SignInHeaders>
 
         <div style={{ marginBottom: '15px' }}>
           <label

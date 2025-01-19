@@ -49,7 +49,14 @@ function MainContents() {
         <>
         <h1>MainContents</h1>
         {data.map((data) => (
-            <div>
+            <div style={{
+                display: 'flex'
+            }}>
+                <Contents data={data}/>
+                <Contents data={data}/>
+                <Contents data={data}/>
+                <Contents data={data}/>
+                <Contents data={data}/>
                 <Contents data={data}/>
             </div>
         ))}
@@ -70,9 +77,16 @@ interface contentDataTypes {
 function Contents(data: contentDataTypes) {
     const [changeLike, setChangeLike] = useState(data.data.like)
     return (
-        <div>
+        <div style={{
+            border: '1px solid black',
+            width: '200px',
+            height: '300px',
+            flex:1
+        }}>
                 <div>
-                    <img src={data.data.imgURl}/>
+                    <img src={data.data.imgURl} style={{
+                        width: '200px',
+                    }}/>
                 </div>
                 <div>
                     <p>{data.data.title}</p>

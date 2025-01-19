@@ -9,9 +9,9 @@ function MainDiv() {
       src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2405-3@1.1/Cafe24Decozoo.woff2') format('woff2');
       font-weight: normal;
       font-style: normal;
-  }
-  font-family: 'Cafe24Decozoo';
-  `;    
+    }
+    font-family: 'Cafe24Decozoo';
+    `;    
 
     return (
         <>
@@ -23,7 +23,7 @@ function MainDiv() {
             position:'absolute'
         }}>
             <div style={{width:'80vw',
-
+            
             }}>
                 
 

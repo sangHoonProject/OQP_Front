@@ -1,14 +1,12 @@
 import MainContents from "../components/contents/MainContents"
 import Footer from "../components/footers/Footer"
 import Headers from "../components/headers/Headers"
-import MainDiv from "../components/mainDiv/MainDiv"
 import Color from "../styles/Color"
 
 function Main() {
   return (
     <div style={{backgroundColor:Color.sectioncolor}}>
       <Headers />
-      <MainDiv />
       <MainContents />
       <Footer />
       <button onClick={() => {

@@ -15,7 +15,7 @@ function Headers() {
     return (
         <>
         <div style={{width:'100%',
-            height:'400px',
+            height:'150px',
             backgroundColor:Color.topcolor,
             display:"flex",
             justifyContent:'center',

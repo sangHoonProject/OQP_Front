@@ -39,12 +39,9 @@ function MainContents() {
                 display: 'flex',
                 padding:'30px'
             }}>
-                <Contents data={data}/>
-                <Contents data={data}/>
-                <Contents data={data}/>
-                <Contents data={data}/>
-                <Contents data={data}/>
-                <Contents data={data}/>
+                {Array.from({ length: 6 }).map((_, idx) => (
+            <Contents key={idx} data={data} />
+        ))}
             </div>
         ))}
         </>

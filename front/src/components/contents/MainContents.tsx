@@ -1,5 +1,6 @@
 import { useState } from "react"
 import styled from "styled-components";
+import Color from "../../styles/Color"
 
 const Boxlist = styled.div`
   @font-face {
@@ -14,6 +15,39 @@ const Boxlist = styled.div`
   color: #333;
 `;
 
+
+const Sectiontext = styled.div`
+  @font-face {
+    font-family: 'Paperlogy-8ExtraBold';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+}
+font-family: 'Paperlogy-8ExtraBold';
+color: #333;
+`;
+
+const Sectionsubtext = styled.div`
+  @font-face {
+    font-family: 'Paperlogy-8ExtraBold';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+}
+font-family: 'Paperlogy-8ExtraBold';
+color: #333;
+`;
+
+const Quizbtn = styled.button`
+  @font-face {
+    font-family: 'Paperlogy-8ExtraBold';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+}
+font-family: 'Paperlogy-8ExtraBold';
+color: #333;
+`;
 
 function MainContents() {
     const data = [
@@ -34,6 +68,36 @@ function MainContents() {
 ]
     return (
         <>
+        <div style={{
+            height:'500px',
+            padding:'100px'
+        }}>
+            <Sectiontext style={{
+                fontSize:'60px',
+                textAlign:'center',
+                color:Color.black
+            }}>나만의 퀴즈를 만들고 공유하세요!</Sectiontext>
+
+            <Sectionsubtext style={{
+                fontSize:'35px',
+                textAlign:'center',
+                lineHeight: '100px',
+                color:Color.ligray
+            }}>
+                다양한 주제의 퀴즈를 만들고 공유하세요!
+            </Sectionsubtext>
+
+            <Quizbtn style={{
+                width:'300px',
+                lineHeight:'100px',
+                fontSize:'100px',
+                backgroundColor:Color.footerbg,
+                border:'none',
+                borderRadius:'30px',
+                textAlign:'center'
+            }}>퀴즈 만들기</Quizbtn>
+        </div>
+
         {data.map((data) => (
             <div style={{
                 display: 'flex',

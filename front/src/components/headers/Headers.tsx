@@ -11,12 +11,21 @@ const Headerlogo = styled.h1`
 font-family: 'EliceDigitalBaeum_Bold';
 `;
 
+const Loginbutton = styled.a`
+  @font-face {
+    font-family: 'EliceDigitalBaeum_Bold';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_220508@1.0/EliceDigitalBaeum_Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+font-family: 'EliceDigitalBaeum_Bold';
+`;
+
 function Headers() {
     return (
         <>
         <div style={{width:'100%',
-            height:'60px',
-            backgroundColor:Color.headerbackground,
+            height:'80px',
             display:"flex",
             justifyContent:'center',
             zIndex:'100'
@@ -33,11 +42,13 @@ function Headers() {
             fontSize : '35px'
             }}>OQP.</Headerlogo>
 
-            <a href="#" style={{
+            <Loginbutton href="#" style={{
                 float:'right',
                 right:0,
-
-            }}><img src=""></img></a>
+                fontSize:'20px',
+                textDecoration: 'none',
+                color:Color.black
+            }}><img src=""></img>Login</Loginbutton>
             </div>
         </div>
         </>

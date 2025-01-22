@@ -24,7 +24,7 @@ function Footer() {
             textAlign:'center',
             justifyContent:'center',
             alignItems:'center',
-            backgroundColor:Color.footer,
+            backgroundColor:Color.footerbg,
             paddingTop:'100px'
         }}>
             <div style={{

@@ -1,11 +1,12 @@
 const Color = {
     puple : '#401eff',
-    headerbackground : '#071952' ,
-    mainword : '#E6E9AF',
-    sectioncolor : '#FFF4EA',
+    
+    headerbg : '#071952' ,
+    sectionbg : '#FAFFC5',
+    footerbg : '#A9BFA8',
+
     white: '#FFFFFF',
-    ligray : '#F5F7F8',
-    footer : '#B19470',
+    ligray : '#B7B7B7',
     black : '#000000'
 }
 

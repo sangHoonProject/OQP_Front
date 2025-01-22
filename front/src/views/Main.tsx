@@ -5,7 +5,7 @@ import Color from "../styles/Color"
 
 function Main() {
   return (
-    <div style={{backgroundColor:Color.sectioncolor}}>
+    <div style={{backgroundColor:Color.sectionbg}}>
       <Headers />
       <MainContents />
       <Footer />

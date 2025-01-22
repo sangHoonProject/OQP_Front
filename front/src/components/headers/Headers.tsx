@@ -15,17 +15,30 @@ function Headers() {
     return (
         <>
         <div style={{width:'100%',
-            height:'150px',
-            backgroundColor:Color.topcolor,
+            height:'60px',
+            backgroundColor:Color.headerbackground,
             display:"flex",
             justifyContent:'center',
-            lineHeight:'100px',
             zIndex:'100'
         }}>
+            <div style={{
+                width:'70%',
+                display:'flex',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                padding: '1rem 5%'
+            }}>
             
-            <Headerlogo style={{color:Color.white ,
-            fontSize : '70px',
-            textAlign:'center'}}>OQP.</Headerlogo>
+            <Headerlogo style={{color:Color.black ,
+            fontSize : '35px'
+            }}>OQP.</Headerlogo>
+
+            <a href="#" style={{
+                float:'right',
+                right:0,
+
+            }}><img src=""></img></a>
+            </div>
         </div>
         </>
     )

@@ -46,8 +46,21 @@ const Quizbtn = styled.button`
     font-style: normal;
 }
 font-family: 'Paperlogy-8ExtraBold';
-color: #333;
+color: #000000;
+cursor : pointer;
+backgroundColor: isHovered ? '#ddd' : '#333' // Hover 상태에 따른 배경색 변경
 `;
+
+const Oqptext = styled.div`
+  @font-face {
+    font-family: 'EliceDigitalBaeum_Bold';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_220508@1.0/EliceDigitalBaeum_Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+font-family: 'EliceDigitalBaeum_Bold';
+`;
+
 
 function MainContents() {
     const data = [
@@ -70,32 +83,50 @@ function MainContents() {
         <>
         <div style={{
             height:'500px',
-            padding:'100px'
+            padding:'100px',
+            justifyContent:'center',
+            display:'flex'
         }}>
+            <Oqptext style={{
+                fontSize:'400px',
+                textAlign:'center',
+                zIndex:0,
+                position:'fixed',
+                color:Color.white,
+                lineHeight:'400px'
+            }}>O  Q  P.</Oqptext>
             <Sectiontext style={{
-                fontSize:'60px',
+                position:'absolute',
+                width:'350px',
+                padding:'50px',
+                fontSize:'40px',
                 textAlign:'center',
-                color:Color.black
-            }}>나만의 퀴즈를 만들고 공유하세요!</Sectiontext>
-
+                border:'0.5px solid gray',
+                borderRadius:'30px',
+                color:Color.black,
+                backgroundColor:Color.white,
+                zIndex:200,
+                translate:'(-21rem , -2ex)'
+            }}>나만의 퀴즈를<br></br>만들고 공유하세요!
             <Sectionsubtext style={{
-                fontSize:'35px',
+                fontSize:'25px',
                 textAlign:'center',
-                lineHeight: '100px',
-                color:Color.ligray
+                margin:'10px',
+                color:Color.ligray,
+                marginTop:'100px'
             }}>
-                다양한 주제의 퀴즈를 만들고 공유하세요!
+                다양한 주제의 퀴즈를<br />만들고 공유하세요!
             </Sectionsubtext>
-
             <Quizbtn style={{
                 width:'300px',
                 lineHeight:'100px',
-                fontSize:'100px',
-                backgroundColor:Color.footerbg,
+                fontSize:'50px',
                 border:'none',
                 borderRadius:'30px',
                 textAlign:'center'
             }}>퀴즈 만들기</Quizbtn>
+            </Sectiontext>
+            
         </div>
 
         {data.map((data) => (

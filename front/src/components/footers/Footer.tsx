@@ -18,6 +18,8 @@ function Footer() {
     return (
         <>
         <Footertext style={{
+            position:'relative',
+            marginBottom:'-30px',
             bottom:0,
             width:'100%',
             height:'200px',
@@ -25,7 +27,8 @@ function Footer() {
             justifyContent:'center',
             alignItems:'center',
             backgroundColor:Color.footerbg,
-            paddingTop:'100px'
+            paddingTop:'100px',
+            zIndex:600
         }}>
             <div style={{
                 display:'flex',

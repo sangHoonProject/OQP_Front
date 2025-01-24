@@ -2,7 +2,7 @@ const Color = {
     puple : '#401eff',
     
     headerbg : '#071952' ,
-    sectionbg : '#FAFFC5',
+    sectionbg : '#BAD8B6',
     footerbg : '#A9BFA8',
 
     white: '#FFFFFF',

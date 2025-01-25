@@ -6,19 +6,48 @@ import Auth from '../../api/Auth';
 import '../../styles/Fonts.css';
 import styled from 'styled-components';
 
+
 const SignInHeaders = styled.h1`
   @font-face {
-    font-family: 'godoRoundedR';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2409-1@1.0/godoRoundedR.woff2') format('woff2');
-    font-weight: 400;
+    font-family: 'NoonnuBasicGothicRegular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noon-2410@1.0/NoonnuBasicGothicRegular.woff2') format('woff2');
+    font-weight: normal;
     font-style: normal;
-  }
+}
 
-  font-family: 'godoRoundedR', sans-serif;
-  font-size: 2rem;
-  color: #333;
+  font-family: 'NoonnuBasicGothicRegular';
 `;
 
+const Email = styled.label`
+  @font-face {
+    font-family: 'NoonnuBasicGothicRegular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noon-2410@1.0/NoonnuBasicGothicRegular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+  font-family: 'NoonnuBasicGothicRegular';
+`;
+
+const Oqptext = styled.div`
+  @font-face {
+    font-family: 'EliceDigitalBaeum_Bold';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_220508@1.0/EliceDigitalBaeum_Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+font-family: 'EliceDigitalBaeum_Bold';
+`;
+
+// const Link = styled.`
+//   @font-face {
+//     font-family: 'Paperlogy-8ExtraBold';
+//     src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2') format('woff2');
+//     font-weight: 800;
+//     font-style: normal;
+// }
+// font-family: 'Paperlogy-8ExtraBold';
+// `;
 
 function SignIn() {
   const [email, setEmail] = useState('')
@@ -52,37 +81,46 @@ function SignIn() {
         height: '100vh',
         padding: '10px',
         boxSizing: 'border-box',
-
+        backgroundColor:Color.sectionbg
       }}
     >
+      <Oqptext style={{
+                fontSize:'400px',
+                textAlign:'center',
+                zIndex:0,
+                position:'fixed',
+                color:Color.white,
+                lineHeight:'400px'
+            }}>O  Q  P.</Oqptext>
       <div
         style={{
           width: '100%',
           maxWidth: '360px',
-          backgroundColor: '#ffffff',
-          borderRadius: '10px',
-          padding: '20px',
+          backgroundColor:Color.white,
+          borderRadius: '30px',
+          padding: '50px',
           textAlign: 'center',
-          marginBottom: '100px'
+          marginBottom: '100px',
+          border:'0.5px solid gray',
+          zIndex:'3'
         }}
       >
         <SignInHeaders style={{
-          color: Color.puple,
-          marginBottom: '20px',
-          fontFamily: 'godoRoundedR'
+          color: Color.black,
+          marginBottom: '50px',
           }}>Sign In</SignInHeaders>
 
         <div style={{ marginBottom: '15px' }}>
-          <label
+          <Email
             style={{
               display: 'block',
               marginBottom: '5px',
               fontWeight: 'bold',
-              color: '#4682b4', // 짙은 파란색
+              color:Color.black
             }}
           >
             E-mail
-          </label>
+          </Email>
           <input
             type="email"
             placeholder="이메일을 입력하세요."
@@ -93,6 +131,7 @@ function SignIn() {
               borderRadius: '5px',
               boxSizing: 'border-box',
               outline: 'none',
+              color:Color.footerbg
             }}
             onChange={(e) => {
               setEmail(e.target.value)
@@ -107,7 +146,7 @@ function SignIn() {
               display: 'block',
               marginBottom: '5px',
               fontWeight: 'bold',
-              color: '#4682b4',
+              color:Color.black
             }}
           >
             Password
@@ -134,7 +173,7 @@ function SignIn() {
             marginTop: '20px',
             width: '100%',
             padding: '10px',
-            backgroundColor: '#401eff', // 메인 파란색
+            backgroundColor:Color.footerbg,
             color: '#ffffff',
             border: 'none',
             borderRadius: '5px',
@@ -151,7 +190,8 @@ function SignIn() {
             to="/SignUp"
             style={{
               color: 'rgb(53, 53, 53)',
-                
+              textDecoration:'none',
+              lineHeight:'50px'
             }}
           >
             이미회원이 아니신가요? 로그인
@@ -161,7 +201,8 @@ function SignIn() {
             to="/signup"
             style={{
               color: 'rgb(53, 53, 53)',
-                
+              textDecoration:'none',
+              lineHeight:'50px'
             }}
           >
             비밀번호를 잊으셨나요?

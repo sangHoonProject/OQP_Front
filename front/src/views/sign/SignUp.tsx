@@ -3,6 +3,19 @@ import toast, { Toaster } from 'react-hot-toast'
 import { Link } from 'react-router-dom'
 import Color from '../../styles/Color'
 import Auth from '../../api/Auth'
+import styled from 'styled-components'
+
+const SignUpHeaders = styled.h1`
+  @font-face {
+    font-family: 'NoonnuBasicGothicRegular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noon-2410@1.0/NoonnuBasicGothicRegular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+  font-family: 'NoonnuBasicGothicRegular';
+`;
+
 
 function SignUp() {
   const [userEmail, setUserEmail] = useState('')
@@ -46,7 +59,7 @@ function SignUp() {
         height: '100vh',
         padding: '10px',
         boxSizing: 'border-box',
-
+        backgroundColor:Color.sectionbg
       }}
     >
       <div
@@ -54,16 +67,17 @@ function SignUp() {
           width: '100%',
           maxWidth: '360px',
           backgroundColor: '#ffffff',
-          borderRadius: '10px',
+          borderRadius: '30px',
+          border:'0.5px solid gray',
           padding: '20px',
           textAlign: 'center',
           marginBottom: '100px'
         }}
       >
-        <h1 style={{
-          color: Color.puple,
+        <SignUpHeaders style={{
+          color: Color.black,
           marginBottom: '20px',
-          }}>Sign Up</h1>
+          }}>Sign Up</SignUpHeaders>
 
         <div style={{ marginBottom: '15px' }}>
           <label

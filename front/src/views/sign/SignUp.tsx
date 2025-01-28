@@ -16,6 +16,27 @@ const SignUpHeaders = styled.h1`
   font-family: 'NoonnuBasicGothicRegular';
 `;
 
+const Infotext = styled.label`
+  @font-face {
+    font-family: 'NoonnuBasicGothicRegular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noon-2410@1.0/NoonnuBasicGothicRegular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+  font-family: 'NoonnuBasicGothicRegular';
+`;
+
+const Oqptext = styled.div`
+  @font-face {
+    font-family: 'EliceDigitalBaeum_Bold';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_220508@1.0/EliceDigitalBaeum_Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+font-family: 'EliceDigitalBaeum_Bold';
+`;
+
 
 function SignUp() {
   const [userEmail, setUserEmail] = useState('')
@@ -62,6 +83,14 @@ function SignUp() {
         backgroundColor:Color.sectionbg
       }}
     >
+      <Oqptext style={{
+                fontSize:'400px',
+                textAlign:'center',
+                zIndex:0,
+                position:'fixed',
+                color:Color.white,
+                lineHeight:'400px'
+            }}>O  Q  P.</Oqptext>
       <div
         style={{
           width: '100%',
@@ -69,9 +98,10 @@ function SignUp() {
           backgroundColor: '#ffffff',
           borderRadius: '30px',
           border:'0.5px solid gray',
-          padding: '20px',
+          padding: '50px',
           textAlign: 'center',
-          marginBottom: '100px'
+          marginBottom: '100px',
+          zIndex:2
         }}
       >
         <SignUpHeaders style={{
@@ -80,16 +110,16 @@ function SignUp() {
           }}>Sign Up</SignUpHeaders>
 
         <div style={{ marginBottom: '15px' }}>
-          <label
+          <Infotext
             style={{
               display: 'block',
               marginBottom: '5px',
               fontWeight: 'bold',
-              color: '#4682b4',
+              color:Color.black
             }}
           >
             E-mail
-          </label>
+          </Infotext>
           <input
             type="email"
             placeholder="이메일을 입력하세요."
@@ -108,16 +138,16 @@ function SignUp() {
           <button onClick={emailCheck}>인증</button>
         </div>
         <div style={{ marginBottom: '15px' }}>
-          <label
+          <Infotext
             style={{
               display: 'block',
               marginBottom: '5px',
               fontWeight: 'bold',
-              color: '#4682b4', // 짙은 파란색
+              color:Color.black
             }}
           >
             E-mail vaildatoin
-          </label>
+          </Infotext>
           <input
             type="text"
             placeholder="이메일 인증코드를 입력하세요."
@@ -136,16 +166,16 @@ function SignUp() {
         </div>
 
         <div style={{ marginBottom: '15px' }}>
-          <label
+          <Infotext
             style={{
               display: 'block',
               marginBottom: '5px',
               fontWeight: 'bold',
-              color: '#4682b4',
+              color:Color.black
             }}
           >
             Nick Name
-          </label>
+          </Infotext>
           <input
             type="text"
             placeholder="닉네임을 입력하세요."
@@ -164,16 +194,16 @@ function SignUp() {
         </div>
 
         <div style={{ marginBottom: '20px' }}>
-          <label
+          <Infotext
             style={{
               display: 'block',
               marginBottom: '5px',
               fontWeight: 'bold',
-              color: '#4682b4',
+              color:Color.black
             }}
           >
             Password
-          </label>
+          </Infotext>
           <input
             type="password"
             placeholder="비밀번호를 입력하세요."
@@ -195,7 +225,7 @@ function SignUp() {
           style={{
             width: '100%',
             padding: '10px',
-            backgroundColor: '#401eff', // 메인 파란색
+            backgroundColor:Color.footerbg,
             color: '#ffffff',
             border: 'none',
             borderRadius: '5px',
@@ -211,7 +241,8 @@ function SignUp() {
           <Link
             to="/SignIn"
             style={{
-              color: Color.puple,
+              color: Color.black,
+              textDecoration:'none'
                 
             }}
           >

@@ -18,7 +18,7 @@ const SignInHeaders = styled.h1`
   font-family: 'NoonnuBasicGothicRegular';
 `;
 
-const Email = styled.label`
+const Infotext = styled.label`
   @font-face {
     font-family: 'NoonnuBasicGothicRegular';
     src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noon-2410@1.0/NoonnuBasicGothicRegular.woff2') format('woff2');
@@ -111,7 +111,7 @@ function SignIn() {
           }}>Sign In</SignInHeaders>
 
         <div style={{ marginBottom: '15px' }}>
-          <Email
+          <Infotext
             style={{
               display: 'block',
               marginBottom: '5px',
@@ -120,7 +120,7 @@ function SignIn() {
             }}
           >
             E-mail
-          </Email>
+          </Infotext>
           <input
             type="email"
             placeholder="이메일을 입력하세요."
@@ -141,7 +141,7 @@ function SignIn() {
 
 
         <div style={{ marginBottom: '20px' }}>
-          <label
+          <Infotext
             style={{
               display: 'block',
               marginBottom: '5px',
@@ -150,7 +150,7 @@ function SignIn() {
             }}
           >
             Password
-          </label>
+          </Infotext>
           <input
             type="password"
             placeholder="비밀번호를 입력하세요."

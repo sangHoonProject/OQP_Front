@@ -17,35 +17,36 @@ const Boxlist = styled.div`
 
 
 const Sectiontext = styled.div`
-  @font-face {
-    font-family: 'Paperlogy-8ExtraBold';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2') format('woff2');
-    font-weight: 800;
+@font-face {
+    font-family: 'SUITE-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
+    font-weight: 400;
     font-style: normal;
 }
-font-family: 'Paperlogy-8ExtraBold';
-color: #333;
+    font-weight: bold;
+font-family: 'SUITE-Regular';
 `;
 
 const Sectionsubtext = styled.div`
-  @font-face {
-    font-family: 'Paperlogy-8ExtraBold';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2') format('woff2');
-    font-weight: 800;
+@font-face {
+    font-family: 'SUITE-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
+    font-weight: 400;
     font-style: normal;
 }
-font-family: 'Paperlogy-8ExtraBold';
-color: #333;
+    font-weight: bold;
+font-family: 'SUITE-Regular';
 `;
 
 const Quizbtn = styled.button`
-  @font-face {
-    font-family: 'Paperlogy-8ExtraBold';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2') format('woff2');
-    font-weight: 800;
+@font-face {
+    font-family: 'SUITE-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
+    font-weight: 400;
     font-style: normal;
 }
-font-family: 'Paperlogy-8ExtraBold';
+font-family: 'SUITE-Regular';
+font-weight: bold;
 color: #000000;
 cursor : pointer;
 backgroundColor: isHovered ? '#ddd' : '#333' // Hover 상태에 따른 배경색 변경

@@ -81,7 +81,7 @@ function SignIn() {
         height: '100vh',
         padding: '10px',
         boxSizing: 'border-box',
-        backgroundColor:Color.sectionbg
+        backgroundColor:Color.darkmint
       }}
     >
       <Oqptext style={{
@@ -131,7 +131,7 @@ function SignIn() {
               borderRadius: '5px',
               boxSizing: 'border-box',
               outline: 'none',
-              color:Color.footerbg
+              color:Color.darkmint
             }}
             onChange={(e) => {
               setEmail(e.target.value)
@@ -173,7 +173,7 @@ function SignIn() {
             marginTop: '20px',
             width: '100%',
             padding: '10px',
-            backgroundColor:Color.footerbg,
+            backgroundColor:Color.darkmint,
             color: '#ffffff',
             border: 'none',
             borderRadius: '5px',

@@ -26,22 +26,23 @@ function Footer() {
             textAlign:'center',
             justifyContent:'center',
             alignItems:'center',
-            backgroundColor:Color.footerbg,
+            backgroundColor:Color.darkgray,
             paddingTop:'100px',
             zIndex:600
         }}>
             <div style={{
                 display:'flex',
                 alignItems:'center',
-                justifyContent:'center'
+                justifyContent:'center',
+                color:Color.white
             }}>
-            <p>이상훈</p>
-            <p>김민서</p>
-            <p>김대운</p>
-            <p>이 만든</p>
+            <p>이상훈 </p>
+            <p>김민서 </p>
+            <p>김대운 </p>
+            <p>이 만든 </p>
             <p>역작</p>
             </div><br />
-            <h3>"Copyright OQP ⓒ 2025 All right reserved"</h3>
+            <h3 style={{color:Color.white}}>Copyright OQP ⓒ 2025 All right reserved.</h3>
         </Footertext>
         </>
     )

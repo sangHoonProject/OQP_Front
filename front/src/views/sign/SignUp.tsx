@@ -135,7 +135,13 @@ function SignUp() {
               setUserEmail(e.target.value)
             }}
           />
-          <button onClick={emailCheck}>인증</button>
+          <button style={{
+            width:'300px',
+            border:'none',
+            backgroundColor:Color.ligray,
+            color:Color.white,
+            borderRadius:'10px'
+          }} onClick={emailCheck}>인증</button>
         </div>
         <div style={{ marginBottom: '15px' }}>
           <Infotext

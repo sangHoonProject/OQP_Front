@@ -133,7 +133,8 @@ function MainContents() {
         {data.map((data) => (
             <div style={{
                 display: 'flex',
-                padding:'30px'
+                padding:'30px',
+                backgroundColor:Color.ligray
             }}>
                 {Array.from({ length: 6 }).map((_, idx) => (
             <Contents key={idx} data={data} />

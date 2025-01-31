@@ -81,7 +81,7 @@ function SignIn() {
         height: '100vh',
         padding: '10px',
         boxSizing: 'border-box',
-        backgroundColor:Color.darkmint
+        backgroundColor:Color.mint
       }}
     >
       <Oqptext style={{
@@ -108,7 +108,9 @@ function SignIn() {
         <SignInHeaders style={{
           color: Color.black,
           marginBottom: '50px',
-          }}>Sign In</SignInHeaders>
+          }}><Oqptext style={{
+            fontSize:'20px'
+          }}>O Q P.</Oqptext>Sign In</SignInHeaders>
 
         <div style={{ marginBottom: '15px' }}>
           <Infotext
@@ -127,11 +129,11 @@ function SignIn() {
             style={{
               width: '100%',
               padding: '10px',
-              border: '1px solid #000000',
-              borderRadius: '5px',
+              borderRadius: '15px',
               boxSizing: 'border-box',
               outline: 'none',
-              color:Color.darkmint
+              border:'0.5px solid gray',
+              backgroundColor:Color.white
             }}
             onChange={(e) => {
               setEmail(e.target.value)
@@ -157,10 +159,11 @@ function SignIn() {
             style={{
               width: '100%',
               padding: '10px',
-              border: '1px solid #000000',
-              borderRadius: '5px',
+              borderRadius: '15px',
               boxSizing: 'border-box',
               outline: 'none',
+              border:'0.5px solid gray',
+              backgroundColor:Color.white
             }}
             onChange={(e) => {
               setPassWord(e.target.value)

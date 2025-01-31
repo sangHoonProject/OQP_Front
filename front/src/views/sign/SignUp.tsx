@@ -106,8 +106,10 @@ function SignUp() {
       >
         <SignUpHeaders style={{
           color: Color.black,
-          marginBottom: '20px',
-          }}>Sign Up</SignUpHeaders>
+          marginBottom: '20px'
+          }}><Oqptext style={{
+            fontSize:'20px'
+          }}>O Q P.</Oqptext>Sign Up</SignUpHeaders>
 
         <div style={{ marginBottom: '15px' }}>
           <Infotext
@@ -126,21 +128,23 @@ function SignUp() {
             style={{
               width: '100%',
               padding: '10px',
-              border: '1px solid #000000',
-              borderRadius: '5px',
+              borderRadius: '15px',
               boxSizing: 'border-box',
               outline: 'none',
+              border:'0.5px solid gray',
+              backgroundColor:Color.white
             }}
             onChange={(e) => {
               setUserEmail(e.target.value)
             }}
           />
           <button style={{
-            width:'300px',
+            width:'200px',
+            height:'30px',
             border:'none',
-            backgroundColor:Color.ligray,
+            backgroundColor:Color.black,
             color:Color.white,
-            borderRadius:'10px'
+            borderRadius:'30px'
           }} onClick={emailCheck}>인증</button>
         </div>
         <div style={{ marginBottom: '15px' }}>
@@ -160,10 +164,11 @@ function SignUp() {
             style={{
               width: '100%',
               padding: '10px',
-              border: '1px solid #000000',
-              borderRadius: '5px',
+              borderRadius: '15px',
               boxSizing: 'border-box',
               outline: 'none',
+              border:'0.5px solid gray',
+              backgroundColor:Color.white
             }}
             onChange={(e) => {
               setEmailValidation(e.target.value)
@@ -188,10 +193,11 @@ function SignUp() {
             style={{
               width: '100%',
               padding: '10px',
-              border: '1px solid #000000',
-              borderRadius: '5px',
+              borderRadius: '15px',
               boxSizing: 'border-box',
               outline: 'none',
+              border:'0.5px solid gray',
+              backgroundColor:Color.white
             }}
             onChange={(e) => {
               setNickName(e.target.value)
@@ -216,10 +222,11 @@ function SignUp() {
             style={{
               width: '100%',
               padding: '10px',
-              border: '1px solid #000000',
-              borderRadius: '5px',
+              borderRadius: '15px',
               boxSizing: 'border-box',
               outline: 'none',
+              border:'0.5px solid gray',
+              backgroundColor:Color.white
             }}
             onChange={(e) => {
               setPassword(e.target.value)

@@ -80,7 +80,7 @@ function SignUp() {
         height: '100vh',
         padding: '10px',
         boxSizing: 'border-box',
-        backgroundColor:Color.mint
+        backgroundColor:Color.firstcolor
       }}
     >
       <Oqptext style={{
@@ -238,7 +238,7 @@ function SignUp() {
           style={{
             width: '100%',
             padding: '10px',
-            backgroundColor:Color.darkmint,
+            backgroundColor:Color.firstcolor,
             color: '#ffffff',
             border: 'none',
             borderRadius: '5px',

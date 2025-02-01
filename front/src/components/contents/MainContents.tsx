@@ -66,16 +66,16 @@ font-family: 'EliceDigitalBaeum_Bold';
 function MainContents() {
     const data = [
     {
-        title: '자동차퀴즈',
+        title: '첫번째째 퀴즈',
         subTitle: 'test1',
-        imgURl: 'https://pimg.mk.co.kr/news/cms/202310/20/20231020_01110305000006_L00.jpg',
+        imgURl: 'https://as1.ftcdn.net/jpg/03/45/97/36/1000_F_345973621_sMifpCogXNoIDjmXlbLwx1QZA5ZmQVl8.jpg',
         writer: '김민서',
         like: false,
     },
     {
-        title: '자동차퀴즈',
-        subTitle: 'test1',
-        imgURl: 'https://pimg.mk.co.kr/news/cms/202310/20/20231020_01110305000006_L00.jpg',
+        title: '두번째 퀴즈',
+        subTitle: 'test2',
+        imgURl: 'https://as1.ftcdn.net/jpg/03/45/97/36/1000_F_345973621_sMifpCogXNoIDjmXlbLwx1QZA5ZmQVl8.jpg',
         writer: '김민서',
         like: false,
     },
@@ -94,8 +94,9 @@ function MainContents() {
                 zIndex:0,
                 position:'fixed',
                 color:Color.white,
-                lineHeight:'400px'
+                lineHeight:'400px',
             }}>O  Q  P.</Oqptext>
+            
             <Sectiontext style={{
                 position:'absolute',
                 width:'350px',
@@ -107,7 +108,7 @@ function MainContents() {
                 color:Color.black,
                 backgroundColor:Color.white,
                 zIndex:200,
-                translate:'(-21rem , -2ex)'
+                translate:'(-21rem , -2ex)',
             }}>나만의 퀴즈를<br></br>만들고 공유하세요!
             <Sectionsubtext style={{
                 fontSize:'25px',
@@ -133,8 +134,7 @@ function MainContents() {
         {data.map((data) => (
             <div style={{
                 display: 'flex',
-                padding:'30px',
-                backgroundColor:Color.ligray
+                padding:'30px'
             }}>
                 {Array.from({ length: 6 }).map((_, idx) => (
             <Contents key={idx} data={data} />
@@ -163,7 +163,7 @@ function Contents(data: contentDataTypes) {
             width: '200px',
             flex:1,
             justifyContent:"center",
-            zIndex:700,
+            zIndex:600,
             margin:'5px',
             backgroundColor:'#F5F7F8',
             textAlign:'center',

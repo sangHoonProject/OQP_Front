@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import Color from "../../styles/Color"
+import Color from "../../styles/Color";
+import React from "react";
 
 const Headerlogo = styled.h1`
   @font-face {
@@ -28,7 +29,10 @@ function Headers() {
             height:'80px',
             display:"flex",
             justifyContent:'center',
-            zIndex:'100'
+            zIndex:'700',
+            position:'fixed',
+            backgroundColor: 'rgba(34, 34, 34, 0.5)',
+            backdropFilter:'blur(8px)'
         }}>
             <div style={{
                 width:'70%',
@@ -38,7 +42,7 @@ function Headers() {
                 padding: '1rem 5%'
             }}>
             
-            <Headerlogo style={{color:Color.black ,
+            <Headerlogo style={{color:Color.white ,
             fontSize : '35px'
             }}>OQP.</Headerlogo>
 
@@ -47,7 +51,7 @@ function Headers() {
                 right:0,
                 fontSize:'20px',
                 textDecoration: 'none',
-                color:Color.black
+                color:Color.white
             }}><img src=""></img>Login</Loginbutton>
             </div>
         </div>

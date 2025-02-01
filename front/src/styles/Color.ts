@@ -2,7 +2,7 @@ const Color = {
     puple : '#401eff',
     
     headerbg : '#071952' ,
-    mint : '#BAD8B6', //메인 배경 색상
+    firstcolor : '#270082', //메인 배경 색상
     darkmint : '#A9BFA8', //서브 색상
     darkgray : '#222831',
 

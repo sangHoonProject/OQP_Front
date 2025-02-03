@@ -1,8 +1,10 @@
 import styled from "styled-components";
 import Color from "../../styles/Color";
-import React from "react";
+// import React from "react"; React 16 이하일 때 이 코드 사용!
+import { Link } from "react-router-dom";
 
-const Headerlogo = styled.h1`
+
+const Headerlogo = styled.a`
   @font-face {
     font-family: 'EliceDigitalBaeum_Bold';
     src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_220508@1.0/EliceDigitalBaeum_Bold.woff2') format('woff2');
@@ -21,6 +23,8 @@ const Loginbutton = styled.a`
 }
 font-family: 'EliceDigitalBaeum_Bold';
 `;
+
+
 
 function Headers() {
     return (
@@ -42,17 +46,20 @@ function Headers() {
                 padding: '1rem 5%'
             }}>
             
-            <Headerlogo style={{color:Color.white ,
-            fontSize : '35px'
+            <Headerlogo href="#" style={{color:Color.white ,
+            fontSize : '35px',
+            textDecoration:'none'
             }}>OQP.</Headerlogo>
 
             <Loginbutton href="#" style={{
                 float:'right',
                 right:0,
+                textDecoration:'none'
+            }}> <Link style={{
                 fontSize:'20px',
                 textDecoration: 'none',
                 color:Color.white
-            }}><img src=""></img>Login</Loginbutton>
+            }} to="/SignUp">Sign Up</Link></Loginbutton>
             </div>
         </div>
         </>

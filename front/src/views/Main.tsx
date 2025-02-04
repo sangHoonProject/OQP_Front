@@ -10,10 +10,6 @@ function Main() {
       <Headers />
       <MainContents />
       <Footer />
-      <button onClick={() => {
-        window.location.href = './SignIn'
-      }}></button>
-      {/* <nav style={{color:}}>sdaf</nav> */}
     </div>
   )
 }

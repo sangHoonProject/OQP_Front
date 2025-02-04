@@ -1,6 +1,7 @@
 import { useState } from "react"
 import styled from "styled-components";
-import Color from "../../styles/Color"
+import Color from "../../styles/Color";
+import { Link } from "react-router-dom";
 
 const Boxlist = styled.div`
   @font-face {
@@ -14,6 +15,7 @@ const Boxlist = styled.div`
   font-size: 15px;
   color: #333;
 `;
+// 퀴즈 항목 컨텐츠 박스 텍스트 폰트
 
 
 const Sectiontext = styled.div`
@@ -26,6 +28,7 @@ const Sectiontext = styled.div`
     font-weight: bold;
 font-family: 'SUITE-Regular';
 `;
+// 메인페이지 중앙 박스 요소 첫번째 텍스트
 
 const Sectionsubtext = styled.div`
 @font-face {
@@ -37,6 +40,8 @@ const Sectionsubtext = styled.div`
     font-weight: bold;
 font-family: 'SUITE-Regular';
 `;
+// 메인페이지 중앙 박스 요소 세번째 텍스트
+
 
 const Quizbtn = styled.button`
 @font-face {
@@ -51,6 +56,8 @@ color: #000000;
 cursor : pointer;
 backgroundColor: isHovered ? '#ddd' : '#333' // Hover 상태에 따른 배경색 변경
 `;
+// 메인페이지 중앙 박스 요소 버튼 텍스트
+
 
 const Oqptext = styled.div`
   @font-face {
@@ -61,12 +68,13 @@ const Oqptext = styled.div`
 }
 font-family: 'EliceDigitalBaeum_Bold';
 `;
+// OQP 글씨체
 
 
 function MainContents() {
     const data = [
     {
-        title: '첫번째째 퀴즈',
+        title: '첫번째 퀴즈',
         subTitle: 'test1',
         imgURl: 'https://as1.ftcdn.net/jpg/03/45/97/36/1000_F_345973621_sMifpCogXNoIDjmXlbLwx1QZA5ZmQVl8.jpg',
         writer: '김민서',
@@ -78,7 +86,9 @@ function MainContents() {
         imgURl: 'https://as1.ftcdn.net/jpg/03/45/97/36/1000_F_345973621_sMifpCogXNoIDjmXlbLwx1QZA5ZmQVl8.jpg',
         writer: '김민서',
         like: false,
-    },
+    }
+    // 메인페이지 퀴즈 항목 테스트용
+    ,
 ]
     return (
         <>
@@ -126,7 +136,10 @@ function MainContents() {
                 border:'none',
                 borderRadius:'30px',
                 textAlign:'center'
-            }}>퀴즈 만들기</Quizbtn>
+            }}> <Link to="/Write_Quiz" style={{
+                textDecoration:'none',
+                color:Color.black
+            }}>퀴즈 만들기</Link> </Quizbtn>
             </Sectiontext>
             
         </div>

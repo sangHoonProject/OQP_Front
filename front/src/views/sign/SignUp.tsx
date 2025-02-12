@@ -109,7 +109,11 @@ function SignUp() {
           marginBottom: '20px'
           }}><Oqptext style={{
             fontSize:'20px'
-          }}>O Q P.</Oqptext>Sign Up</SignUpHeaders>
+          }}> <Link style={{
+            fontSize:'20px',
+            textDecoration:'none',
+            color:Color.black
+          }} to="/">O Q P.</Link></Oqptext>Sign Up</SignUpHeaders>
 
         <div style={{ marginBottom: '15px' }}>
           <Infotext
@@ -247,7 +251,7 @@ function SignUp() {
           }}
           onClick={signup}
         >
-          Sign In
+          Sign Up
         </button>
 
         <div style={{ marginTop: '10px' }}>

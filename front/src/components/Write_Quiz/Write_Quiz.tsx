@@ -32,7 +32,6 @@ const ContentsArea = styled.div`
 font-family: 'SUITE-Regular';
 font-weight: bold;
 color: #000000;
-cursor : pointer;
 backgroundColor: isHovered ? '#ddd' : '#333' // Hover 상태에 따른 배경색 변경
 `;
 // 화면 중앙 콘텐츠 박스 폰트
@@ -138,12 +137,12 @@ function Write_Quiz(){
                 </ContentsArea>
             </div>
 
-            <p style={{
+            <ContentsArea style={{
                 fontSize:'20px',
                 color:Color.white,
                 textAlign:'center',
                 lineHeight:'100px'
-            }}>다른 사용자가 만든 퀴즈도 보고 가세요!</p>
+            }}>다른 사용자가 만든 퀴즈도 보고 가세요!</ContentsArea>
             <div style={{
                 bottom:0
             }}>

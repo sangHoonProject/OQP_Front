@@ -220,7 +220,7 @@ function Footer() {
                 textDecoration:'none',
                 lineHeight:'80px',
                 marginLeft:'30px'
-                }}><Link to="/main" style={{
+                }}><Link to="/" style={{
                     textDecoration:'none',
                     color:Color.white
                 }}>O Q P.</Link></Footerlogo>

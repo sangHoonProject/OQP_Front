@@ -4,7 +4,7 @@ import Color from "../../styles/Color";
 import { Link } from "react-router-dom";
 
 
-const Headerlogo = styled.a`
+const Headerlogo = styled.div`
   @font-face {
     font-family: 'EliceDigitalBaeum_Bold';
     src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_220508@1.0/EliceDigitalBaeum_Bold.woff2') format('woff2');
@@ -46,10 +46,13 @@ function Headers() {
                 padding: '1rem 5%'
             }}>
             
-            <Headerlogo href="#" style={{color:Color.white ,
+            <Headerlogo style={{color:Color.white ,
             fontSize : '35px',
             textDecoration:'none'
-            }}>OQP.</Headerlogo>
+            }}><Link to='/' style={{
+                textDecoration:'none',
+                color:Color.white
+            }}>OQP.</Link></Headerlogo>
 
             
             <div style={{
@@ -66,7 +69,7 @@ function Headers() {
                 textDecoration: 'none',
                 color:Color.white
             }} to="/SignUp">Sign Up</Link></Loginbutton>
-
+            
             <img src="https://www.kg-mobility.com/images/cm/icons/24/icon-menu-light.svg" alt="line" />
             </div>
             </div>

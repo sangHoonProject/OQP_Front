@@ -51,8 +51,14 @@ function Headers() {
             textDecoration:'none'
             }}>OQP.</Headerlogo>
 
-            <Loginbutton href="#" style={{
+            
+            <div style={{
                 float:'right',
+                display:'flex',
+                justifyContent:'space-between',
+                width:'130px'
+            }}>
+            <Loginbutton href="#" style={{
                 right:0,
                 textDecoration:'none'
             }}> <Link style={{
@@ -60,6 +66,9 @@ function Headers() {
                 textDecoration: 'none',
                 color:Color.white
             }} to="/SignUp">Sign Up</Link></Loginbutton>
+
+            <img src="https://www.kg-mobility.com/images/cm/icons/24/icon-menu-light.svg" alt="line" />
+            </div>
             </div>
         </div>
         </>

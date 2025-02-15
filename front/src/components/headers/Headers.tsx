@@ -29,6 +29,13 @@ font-family: 'EliceDigitalBaeum_Bold';
 function Headers() {
     return (
         <>
+        <div style={{
+            width:'100%',
+            height:'50px',
+            backgroundColor:'rgba(34, 34, 34, 0.5)',
+            position:'fixed',
+            zIndex:'700'
+        }}></div>
         <div style={{width:'100%',
             height:'80px',
             display:"flex",
